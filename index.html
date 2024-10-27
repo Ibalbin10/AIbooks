@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisión Histórica - Trilogía de Trajano</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Página de Ingreso del Nombre del Usuario -->
+    <section id="name-entry" style="text-align: center;">
+        <h1>Bienvenido a la Época de Trajano</h1>
+        <p style="color: #4A2F27; font-size: 18px; max-width: 500px; margin: 10px auto;">
+            Sumérgete en los desafíos y conquistas del Imperio Romano. Este quiz te llevará a través de 
+            decisiones políticas, batallas y estrategias que definieron una era. ¿Estás listo para demostrar 
+            cuánto sabes sobre Roma en la época de Trajano? ¡Introduce tu nombre y comienza el viaje!
+        </p>
+        <input type="text" id="user-name" placeholder="Escribe tu nombre">
+        <button onclick="startQuiz()">Empezar Quiz</button>
+    </section>
+
+    <!-- Selección de Libro -->
+    <section id="book-selection" style="display: none; text-align: center;">
+        <h1>Elige un Libro para Comenzar</h1>
+        <div class="book-card">
+            <h2>Los asesinos del emperador</h2>
+            <button onclick="selectBook('book1')">Iniciar</button>
+        </div>
+        <div class="book-card">
+            <h2>Circo Máximo</h2>
+            <button onclick="selectBook('book2')">Iniciar</button>
+        </div>
+        <div class="book-card">
+            <h2>La legión perdida</h2>
+            <button onclick="selectBook('book3')">Iniciar</button>
+        </div>
+    </section>
+
+    <!-- Sección de Preguntas -->
+    <section id="quiz-section" style="display: none;">
+        <h2 id="question-text">Pregunta:</h2>
+        
+        <!-- Visualización de Puntos, Nivel y Nombre del Usuario -->
+        <div id="score-display">
+            <span id="user-name-display"></span>
+            <span id="points-display">Puntos: 0</span>
+            <span id="level-display">Nivel: 1</span>
+        </div>
+
+        <!-- Barra de Progreso -->
+        <div id="progress-container">
+            <progress id="progress-bar" value="0" max="100"></progress>
+            <span id="progress-text">Progreso: 0%</span>
+        </div>
+
+        <div id="answer-area">
+            <!-- Aquí se mostrarán las opciones de multiple choice -->
+        </div>
+    </section>
+
+    <!-- Cuadro de Feedback -->
+    <div id="feedback-box" style="display: none;">
+        <p id="feedback-message"></p>
+        <button onclick="closeFeedback()">Continuar</button>
+    </div>
+
+    <!-- Ranking de Usuario -->
+    <section id="ranking" style="display: none;">
+        <h2>Ranking de Participantes</h2>
+        <ul id="ranking-list">
+            <!-- Lista del ranking se generará aquí -->
+        </ul>
+        <button onclick="goBackToBooks()">Elegir Otro Libro</button>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
